@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <!-- Heading -->
+    <div class="box" id="heading">
+        <h1><%= kindOfDay %></h1>
+    </div>
+
+    <div class="box">
+        <!-- List item -->
+        <ul>
+            <% newListItems.forEach(newListItem => { %>
+            <div class="item">
+                <input type="checkbox">
+                <p><%= newListItem %></p>
+            </div>
+            <% }) %>
+            <!-- Form to add to do list -->
+            <form class="item" action="/" method="post">
+                <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                <button type="submit">+</button>
+            </form>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>
